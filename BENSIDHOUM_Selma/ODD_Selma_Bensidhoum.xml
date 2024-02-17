@@ -29,18 +29,18 @@
                France.</head>
             <p>Ce document présente la manière dont ont été encodés les contrats de mariage
                transcrits.</p>
-            <p>L'encodage a été réalisé en vue d'une visualisation du texte sous forme de facimilé
+            <p>L'encodage a été réalisé en vue d'une visualisation du texte sous forme de fac-similé
                interactif afin de mettre en regard la version manuscrite et sa transcription.</p>
-            <p>Les principes suivis ont pour objectif : <list>
+            <p>Les principes appliqués ont pour objectif : <list>
                   <item>dans le cadre des métadonnées du teiHeader, de respecter les principes de
                      description archivistique et de permettre l'identification précise de documents
                      d'archive transcrits et encodés;</item>
                   <item>dans le cadre du balisage des éléments pertinents dans le texte et de leur
-                     indexation dans le teiHeader, de faciliter leur exploitation dans des projet
+                     indexation dans le teiHeader, de faciliter leur exploitation dans des projets
                      d'étude statistique ou de réseaux de relations;</item>
                   <item>dans le cadre de la visualisation sous forme de fac-similé, d'associer les
                      différentes lignes de texte à leur version manuscrite, notamment les
-                     suppression et additions, dans un objectif pédagogique de formation à la
+                     suppressions et additions, dans un objectif pédagogique de formation à la
                      paléographie de l'époque moderne.</item>
                </list></p>
             <div2>
@@ -49,7 +49,7 @@
                   XVIIIème siècle ne prend son sens que si elle s'inscrit dans un projet plus vaste
                   et ambitieux d'étude de la population parisienne de l'époque moderne. Le balisage
                   proposé permet d'identifier les informations intéressant le plus les historiens
-                  spécialistes d'histoire sociale et économique : la profession, la valeur des
+                  spécialistes d'histoire sociale et économique : la profession, la valeur des biens 
                   possédées, les origines géographiques et ethniques, les professions des individus
                   et les liens, familiaux, professionnels ou amicaux, qui les unissent.</p>
                <p>L'angle choisi ici est de regrouper les individus étudiés par profession : nous
@@ -58,14 +58,14 @@
                   les textes littéraires et les archives judiciaires. Dans les textes littéraire,
                   elles représentent la quintessence de la grisette, cette jeune ouvrière de
                   condition médiocre, seule, coquette, et qui se laisse facilement séduire. Dans les
-                  archives judiciaires, nombreuses sont les jeunes femmes qui, arrêtées pour vol ou
-                  pour avoir comme profession celle d’ouvrière en linge. C'est pour des professions
-                  méconnues et mal définies comme celle d'ouvrière en linge que cette étude prend
+                  archives judiciaires, nombreuses sont les jeunes femmes qui, arrêtées pour vol 
+                  déclarent comme profession celle d’ouvrière en linge. C'est pour des professions
+                  méconnues et mal définies comme celle-ci que cette étude prend
                   son sens : essayer de reconstituer des parcours de vie à partir d'éléments
                   matériels tels que les biens propres et les lieux de vie, mais aussi à partir des
                   réseaux de relation qu'une identification des parents et des témoins permet de
                   dessiner. L'étude des apports au mariage de ces ouvrières illustre par exemple la
-                  diversité des situations économique des femmes déclarant cette profession, et
+                  diversité des situations économiques des femmes déclarant cette profession, et
                   l'étude de leurs réseaux de relations permet de mieux les situer dans les métiers
                   de l'industrie textile.</p>
                <p>Cette édition numérique propose donc un balisage non pas littéraire ou
@@ -74,8 +74,8 @@
                   d'informations sur le peuple de Paris à l'époque moderne.</p>
                <p>Nous avons fait le choix de retranscrire les contrats dans leur intégralité et
                   d'associer chaque ligne à une zone de texte pour une visualisation sous forme de
-                  fac-similé. Dans le cadre d'un tel projet de grande ampleur, il ne s'agirait bien
-                  sûr pas de retranscrire l'ensemble des acte notarié encodé dans leur intégralité.
+                  fac-similé. Dans le cadre d'un projet de plus grande ampleur, il ne s'agirait bien
+                  sûr pas de retranscrire l'ensemble des actes notariés encodés dans leur intégralité.
                   Notre objectif était ici d'offrir un outil pédagogique d'aide à la paléographie de
                   l'époque moderne et à la reconnaissance des formules notariales. Celles-ci peuvent
                   paraître très obscures aux non initiés mais, bien qu'elles présentent souvent de
