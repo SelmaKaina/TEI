@@ -10,7 +10,7 @@
          </titleStmt>
          <publicationStmt>
             <p>Transcription encodée et enrichie de contrats de mariage d'ouvrières en linge,
-               réalisée dans le cadre du master TNAH de l'Ecole nationale des chartes.</p>
+               réalisée dans le cadre du master TNAH de l'École nationale des chartes.</p>
          </publicationStmt>
          <sourceDesc>
             <p>Les archives trancrites et encodées dans cette édition sont des minutes issues du
@@ -55,8 +55,8 @@
                   et les liens, familiaux, professionnels ou amicaux, qui les unissent.</p>
                <p>L'angle choisi ici est de regrouper les individus étudiés par profession : nous
                   nous intéressons aux ouvrières en linge, ouvrières de l'industrie textile peu
-                  représentées dans les textes officiels des corporations mais très présentes dans
-                  les textes littéraires et les archives judiciaires. Dans les textes littéraire,
+                  représentées dans les textes officiels des corporations, mais très présentes dans
+                  les textes littéraires et les archives judiciaires. Dans les textes littéraires,
                   elles représentent la quintessence de la grisette, cette jeune ouvrière de
                   condition médiocre, seule, coquette, et qui se laisse facilement séduire. Dans les
                   archives judiciaires, nombreuses sont les jeunes femmes qui, arrêtées pour vol
@@ -70,7 +70,7 @@
                   l'étude de leurs réseaux de relations permet de mieux les situer dans les métiers
                   de l'industrie textile.</p>
                <p>Cette édition numérique propose donc un balisage non pas littéraire ou
-                  linguistique mais purement historique, qui, s'il est appliqué à un large corpus
+                  linguistique, mais purement historique, qui, s'il est appliqué à un large corpus
                   d'actes notariés, permettra de faciliter l'échange et la mise en commun
                   d'informations sur le peuple de Paris à l'époque moderne.</p>
                <p>Nous avons fait le choix de retranscrire les contrats dans leur intégralité et
@@ -85,7 +85,7 @@
             </div2>
             <div2>
                <head>Structure du fichier XML</head>
-               <p>Le document XML est contenu dans un élément racine <gi>teiCorpus</gi>, lui même
+               <p>Le document XML est contenu dans un élément racine <gi>teiCorpus</gi>, lui-même
                   divisé en quatre parties : un premier élément <gi>teiHeader</gi> correspondant à
                   l'ensemble du corpus, et trois éléments <gi>TEI</gi> correspondant chacun à un des
                   documents constitutifs du corpus (les trois contrats de mariage).</p>
@@ -149,7 +149,9 @@
                            <specDesc key="titleStmt"/>
                            <specDesc key="publicationStmt"/>
                            <specDesc key="sourceDesc"/>
-                        </specList> Le <gi>sourceDesc</gi> est composé de l'éléments suivant : <specList>
+                        </specList>
+                        Le <gi>sourceDesc</gi> est composé de l'élément suivant :
+                        <specList>
                            <specDesc key="msDesc"/>
                         </specList></p>
                         <p>L'élément <gi>msDesc</gi> contient la description d'un document d'archive
@@ -225,7 +227,7 @@
                            lieu dans le corps du texte à son entrée dans l'index, et un attribut
                            type précisant le <att>type</att> de lieu dont il s'agit. Le nom du lieu
                            est renseigné dans un élément <gi>placeName</gi> et des informations de
-                           loalisation sont renseignées dans un élément <gi>localisation</gi>.
+                           localisation sont renseignées dans un élément <gi>localisation</gi>.
                            L'attribut <att>type</att> permet de fournir dans l'index des
                            informations qui ne seront pas répétées dans le balisage du corps du
                            texte. L'élément <gi>location</gi> peut être constitué d'une suite
@@ -248,7 +250,7 @@
                            élément <gi>person</gi> qui prend deux attributs : un identifiant unique
                            <att>xml:id</att> permettant de lier chaque mention de la personne à
                            son entrée dans l'index, et un <att>role</att> indiquant son rôle dans le
-                           contexte du présent contrat. Chaque élément <gi>person</gi> est subsivisé
+                           contexte du présent contrat. Chaque élément <gi>person</gi> est subdivisé
                            en deux ou trois sous-parties : un élément <gi>persName</gi> contenant
                            des éléments <gi>forename</gi> et <gi>surname</gi>, un élément
                            <gi>residence</gi> indiquant les informations connues sur un lieu de
@@ -256,7 +258,7 @@
                            profession ou le statut de la personne décrite. L'élément
                            <gi>residence</gi> peut contenir des éléments <gi>placeName</gi>,
                            <gi>settlement</gi> et <gi>country</gi> qui peuvent prendre un
-                           attribut <att>ref</att> s'ils renvoient eux-même à une entrée dans
+                           attribut <att>ref</att> s'ils renvoient eux-mêmes à une entrée dans
                            l'index des lieux.
                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
                               <person xml:id="MGG" role="epouse">
@@ -372,7 +374,7 @@
                         <item>les sommes d'argent engagées et mentionnées dans le cadre du
                            contrat, avec l'élément <gi>measure</gi> qui prend pour attribut
                            <att>type</att> pour désigner la nature de la somme dans le
-                           contexte du contrat, l'attribut <att>quantity</att> pour en expriemr
+                           contexte du contrat, l'attribut <att>quantity</att> pour en exprimer
                            la valeur en chiffres et l'attribut <att>unit</att> pour l'unité de
                            mesure (ici la livre).</item>
                         <item>les professions et status sociaux des personnes mentionnées, à
