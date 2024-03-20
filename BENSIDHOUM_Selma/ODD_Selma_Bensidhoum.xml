@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron"
-   xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
 
    <teiHeader>
       <fileDesc>
@@ -31,7 +30,8 @@
                transcrits.</p>
             <p>L'encodage a été réalisé en vue d'une visualisation du texte sous forme de fac-similé
                interactif afin de mettre en regard la version manuscrite et sa transcription.</p>
-            <p>Les principes appliqués ont pour objectif : <list>
+            <p>Les principes appliqués ont pour objectif :
+               <list>
                   <item>dans le cadre des métadonnées du teiHeader, de respecter les principes de
                      description archivistique et de permettre l'identification précise de documents
                      d'archive transcrits et encodés;</item>
@@ -42,14 +42,15 @@
                      différentes lignes de texte à leur version manuscrite, notamment les
                      suppressions et additions, dans un objectif pédagogique de formation à la
                      paléographie de l'époque moderne.</item>
-               </list></p>
+               </list>
+            </p>
             <div2>
                <head>Objectifs de l'encodage</head>
                <p>Cette édition numérique de contrats de mariage d'ouvrières en linge parisiennes du
                   XVIIIème siècle ne prend son sens que si elle s'inscrit dans un projet plus vaste
                   et ambitieux d'étude de la population parisienne de l'époque moderne. Le balisage
                   proposé permet d'identifier les informations intéressant le plus les historiens
-                  spécialistes d'histoire sociale et économique : la profession, la valeur des biens 
+                  spécialistes d'histoire sociale et économique : la profession, la valeur des biens
                   possédées, les origines géographiques et ethniques, les professions des individus
                   et les liens, familiaux, professionnels ou amicaux, qui les unissent.</p>
                <p>L'angle choisi ici est de regrouper les individus étudiés par profession : nous
@@ -58,7 +59,7 @@
                   les textes littéraires et les archives judiciaires. Dans les textes littéraire,
                   elles représentent la quintessence de la grisette, cette jeune ouvrière de
                   condition médiocre, seule, coquette, et qui se laisse facilement séduire. Dans les
-                  archives judiciaires, nombreuses sont les jeunes femmes qui, arrêtées pour vol 
+                  archives judiciaires, nombreuses sont les jeunes femmes qui, arrêtées pour vol
                   déclarent comme profession celle d’ouvrière en linge. C'est pour des professions
                   méconnues et mal définies comme celle-ci que cette étude prend
                   son sens : essayer de reconstituer des parcours de vie à partir d'éléments
@@ -91,66 +92,69 @@
                <div3>
                   <head>Structure du teiHeader du teiCorpus</head>
                   <p>Le <gi>teiheader</gi> est composé de deux sections : <specList>
-                        <specDesc key="fileDesc"/>
-                        <specDesc key="encodingDesc"/>
-                     </specList>
+                     <specDesc key="fileDesc"/>
+                     <specDesc key="encodingDesc"/>
+                  </specList>
                   </p>
                   <div4>
                      <head>Structure du fileDesc</head>
                      <p>Le <gi>fileDesc</gi> est composé de trois sous-ensembles : <specList>
-                           <specDesc key="titleStmt"/>
-                           <specDesc key="publicationStmt"/>
-                           <specDesc key="sourceDesc"/>
-                        </specList>
+                        <specDesc key="titleStmt"/>
+                        <specDesc key="publicationStmt"/>
+                        <specDesc key="sourceDesc"/>
+                     </specList>
                      </p>
                   </div4>
                   <div4>
                      <head>Structure de l'encodingDesc</head>
                      <p>Le <gi>encodingDesc</gi> est composé de deux sous-ensembles : <specList>
-                           <specDesc key="projectDesc"/>
-                           <specDesc key="editorialDecl"/>
-                        </specList> Le <gi>editorialDecl</gi> contient une balise
-                           <gi>normalization</gi> décrivant les choix réalisés lors de la
+                        <specDesc key="projectDesc"/>
+                        <specDesc key="editorialDecl"/>
+                     </specList> Le <gi>editorialDecl</gi> contient une balise
+                        <gi>normalization</gi> décrivant les choix réalisés lors de la
                         transcription du document manuscrit. </p>
                   </div4>
                </div3>
                <div3>
                   <head>Structure chaque élément TEI</head>
-                  <p>Chaque élément <gi>TEI</gi> est constitué comme suit : <list>
-                        <item>L'élément <gi>teiHeader</gi> rassemblant les métadonnées concernant le
-                           contrat de mariage transcrit et encodé</item>
-                        <item>l'élément <gi>facsimile</gi> contenant les données relatives aux
-                           images permettant la visualisation en fac-similé de l'édition. Chaque
-                           page du contrat correspond à un élément <gi>surface</gi> lui même composé
-                           d'un élément <gi>graphic</gi> indiquant le chemin d'accès vers l'image et
-                           d'une série d'élément <gi>zone</gi> indiquant les différentes zones de
-                           texte sur l'image.</item>
-                        <item>l'élément <gi>text</gi>, constitué d'un seul élément <gi>body</gi> qui
-                           englobe l'intégralité de la transcription du document manuscrit (lui-même
-                           constitué de plusieurs éléments <gi>div</gi> dont l'attribut
-                              <att>type</att> permet de distinguer les trois grandes parties du
-                           contrat (titre, clauses, signatures).</item>
-                     </list>
+                  <p>Chaque élément <gi>TEI</gi> est constitué comme suit :
+                  <list>
+                     <item>L'élément <gi>teiHeader</gi> rassemblant les métadonnées concernant le
+                        contrat de mariage transcrit et encodé</item>
+                     <item>l'élément <gi>facsimile</gi> contenant les données relatives aux
+                        images permettant la visualisation en fac-similé de l'édition. Chaque
+                        page du contrat correspond à un élément <gi>surface</gi> lui même composé
+                        d'un élément <gi>graphic</gi> indiquant le chemin d'accès vers l'image et
+                        d'une série d'élément <gi>zone</gi> indiquant les différentes zones de
+                        texte sur l'image.</item>
+                     <item>l'élément <gi>text</gi>, constitué d'un seul élément <gi>body</gi> qui
+                        englobe l'intégralité de la transcription du document manuscrit (lui-même
+                        constitué de plusieurs éléments <gi>div</gi> dont l'attribut
+                        <att>type</att> permet de distinguer les trois grandes parties du
+                        contrat (titre, clauses, signatures).</item>
+                  </list>
                   </p>
                   <div4>
                      <p>Le <gi>teiheader</gi> de chaque élément <gi>TEI</gi> est composé de deux
-                        sections : <specList>
+                        sections :
+                        <specList>
                            <specDesc key="fileDesc"/>
                            <specDesc key="profileDesc"/>
                         </specList>
                      </p>
                      <div5>
                         <head>Structure du fileDesc</head>
-                        <p>Le <gi>fileDesc</gi> est composé de trois sous-ensembles : <specList>
-                              <specDesc key="titleStmt"/>
-                              <specDesc key="publicationStmt"/>
-                              <specDesc key="sourceDesc"/>
-                           </specList> Le <gi>sourceDesc</gi> est composé de l'éléments suivant : <specList>
-                              <specDesc key="msDesc"/>
-                           </specList></p>
+                        <p>Le <gi>fileDesc</gi> est composé de trois sous-ensembles :
+                        <specList>
+                           <specDesc key="titleStmt"/>
+                           <specDesc key="publicationStmt"/>
+                           <specDesc key="sourceDesc"/>
+                        </specList> Le <gi>sourceDesc</gi> est composé de l'éléments suivant : <specList>
+                           <specDesc key="msDesc"/>
+                        </specList></p>
                         <p>L'élément <gi>msDesc</gi> contient la description d'un document d'archive
-                           individuel transcrit et encodé dans cette édition numérique. <egXML
-                              xmlns="http://www.tei-c.org/ns/Examples">
+                           individuel transcrit et encodé dans cette édition numérique.
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples">
                               <msDesc xml:id="MC-ET-XXVIII-458">
                                  <msIdentifier>
                                     <repository>
@@ -203,14 +207,17 @@
                                     </adminInfo>
                                  </additional>
                               </msDesc>
-                           </egXML></p>
+                           </egXML>
+                        </p>
                      </div5>
                      <div5>
                         <head>Structure du profileDesc</head>
-                        <p>Le <gi>profileDesc</gi> est composé de deux sous-ensembles : <specList>
-                              <specDesc key="settingDesc"/>
-                              <specDesc key="particDesc"/>
-                           </specList></p>
+                        <p>Le <gi>profileDesc</gi> est composé de deux sous-ensembles :
+                        <specList>
+                           <specDesc key="settingDesc"/>
+                           <specDesc key="particDesc"/>
+                        </specList>
+                        </p>
                         <p>L'élément <gi>settingDesc</gi> contient un index des noms de lieux
                            renseignés dans un élément <gi>listPlace</gi>. Chaque nom de lieu
                            correspond à un élément <gi>place</gi> qui prend deux attributs : un
@@ -224,7 +231,8 @@
                            texte. L'élément <gi>location</gi> peut être constitué d'une suite
                            d'éléments <gi>settlement</gi>, <gi>district</gi> et <gi>country</gi>
                            dont des attributs <att>type</att> indiquent la nature géographique ou
-                           administrative. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           administrative.
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples">
                               <place xml:id="paroisse_ste_mar" type="paroisse">
                                  <placeName>paroisse Sainte Marguerite</placeName>
                                  <location>
@@ -233,22 +241,24 @@
                                     <country>France</country>
                                  </location>
                               </place>
-                           </egXML></p>
+                           </egXML>
+                        </p>
                         <p>L'élément <gi>particDesc</gi> contient un index de personnes, renseignés
                            dans un éléments <gi>listPerson</gi>. Chaque personne correspond à un
                            élément <gi>person</gi> qui prend deux attributs : un identifiant unique
-                              <att>xml:id</att> permettant de lier chaque mention de la personne à
+                           <att>xml:id</att> permettant de lier chaque mention de la personne à
                            son entrée dans l'index, et un <att>role</att> indiquant son rôle dans le
                            contexte du présent contrat. Chaque élément <gi>person</gi> est subsivisé
                            en deux ou trois sous-parties : un élément <gi>persName</gi> contenant
                            des éléments <gi>forename</gi> et <gi>surname</gi>, un élément
-                              <gi>residence</gi> indiquant les informations connues sur un lieu de
+                           <gi>residence</gi> indiquant les informations connues sur un lieu de
                            résidence de la personne, et un élément <gi>occupation</gi> donnant la
                            profession ou le statut de la personne décrite. L'élément
-                              <gi>residence</gi> peut contenir des éléments <gi>placeName</gi>,
-                              <gi>settlement</gi> et <gi>country</gi> qui peuvent prendre un
+                           <gi>residence</gi> peut contenir des éléments <gi>placeName</gi>,
+                           <gi>settlement</gi> et <gi>country</gi> qui peuvent prendre un
                            attribut <att>ref</att> s'ils renvoient eux-même à une entrée dans
-                           l'index des lieux. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           l'index des lieux.
+                           <egXML xmlns="http://www.tei-c.org/ns/Examples">
                               <person xml:id="MGG" role="epouse">
                                  <persName>
                                     <forename type="first">Marie</forename>
@@ -266,9 +276,11 @@
                                  </residence>
                                  <occupation>ouvrière en linge</occupation>
                               </person>
-                           </egXML> Lorsque nous disposions d'informations sur les dates d'activité,
+                           </egXML>
+                           Lorsque nous disposions d'informations sur les dates d'activité,
                            notamment pour les notaires, nous avons utilisé les attributs
-                              <att>notBefore</att> et <att>notAfter</att>. </p>
+                           <att>notBefore</att> et <att>notAfter</att>.
+                        </p>
                      </div5>
                   </div4>
                   <div4>
@@ -281,7 +293,8 @@
                         et l'édition numérique, nous avons également reproduit la structure des
                         lignes et zones de texte qui ne sont quant à elles pas porteuses de sens.
                         Nous nous sommes appuyés sur cette division pour structurer le corps du
-                        texte ainsi : <specList>
+                        texte ainsi :
+                        <specList>
                            <specDesc key="body"/>
                            <specDesc key="div"/>
                            <specDesc key="lb"/>
@@ -290,22 +303,23 @@
                            <specDesc key="add"/>
                            <specDesc key="del"/>
                            <specDesc key="unclear"/>
-                        </specList></p>
+                        </specList>
+                     </p>
                      <p>L'élément <gi>div</gi> permet de distinguer les différentes parties du
                         contrat, identifiées à l'aide de l'attribut <att>type</att>. Chaque élément
-                           <gi>div</gi> est quant à lui subdivisé en une succession d'éléments
-                           <gi>l</gi> prenant un attribut <att>facs</att> dont la valeur est un
+                        <gi>div</gi> est quant à lui subdivisé en une succession d'éléments
+                        <gi>l</gi> prenant un attribut <att>facs</att> dont la valeur est un
                         renvoi vers l'identifiant unique de chaque zone de texte indiquée dans
                         l'élément <gi>facsimile</gi>. Des éléments <gi>lb</gi> ont été utilisé au
                         sein de l'en-tête pour distinguer le titre du nom des parties et de la date.
-                           <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <p>
                               <l facs="#c3-p3-l10">Le remploy de propres sera fait suivant la
                                  coutume de Paris</l>
                               <l facs="#c3-p3-l11">et sera l’action d’iceluy réputé propre et
                                  immobiliaire à chacun</l>
                               <l facs="#c3-p3-l12">desdits <rs type="person" ref="#FMB #MB">futurs
-                                    époux</rs> qui aura droit de l’exercer et aux leurs</l>
+                                 époux</rs> qui aura droit de l’exercer et aux leurs</l>
                               <l facs="#c3-p3-l13">seulement.</l>
                            </p>
                         </egXML>
@@ -318,60 +332,64 @@
                         page. Les suppressions ont été signalées par des éléments <gi>del</gi>, et
                         les termes qui n'ont pas pu être déchiffrés par l'élément <gi>unclear</gi>,
                         auquel un indice de certitude concernant la transcription proposé un indiqué
-                        par l'emploi d'un attribut <att>cert</att>. <egXML
-                           xmlns="http://www.tei-c.org/ns/Examples">
+                        par l'emploi d'un attribut <att>cert</att>.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <l facs="#c3-p4-l12">desdits <rs type="person" ref="#MB #FMB">futurs
-                                 époux</rs> il n’y ai aucun enfant <add place="margin">vivant</add>
+                              époux</rs> il n’y ai aucun enfant <add place="margin">vivant</add>
                               nés et à naitre dudit</l>
                         </egXML>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <l facs="#c3-p2-l16">Et ceux de ladite future <del>communauté</del>
                               épouse en pareille somme</l>
-                        </egXML></p>
+                        </egXML>
+                     </p>
                      <p>Le balisage sémantique du texte concerne les noms de lieux, les noms de
                         personnes, et les informations relatives aux personnes pouvant être utiles
                         dans le cadre d'une étude sur la population parisienne du XVIIIème siècle.
                         Ont donc été balisés les noms de personne et les termes désignant des
                         individus mentionnés dans le contrat respectivement avec les éléments
-                           <gi>persName</gi> et <gi>rs</gi>. Les noms de lieux ont été balisés avec
+                        <gi>persName</gi> et <gi>rs</gi>. Les noms de lieux ont été balisés avec
                         l'élément <gi>placeName</gi>. Lorsqu'une mention d'un lieu ou d'une personne
                         ayant une entrée dans l'index est balisée, l'élément prend un attribut
-                           <att>ref</att> dont la valeur est un renvoi vers cette entrée. <egXML
-                           xmlns="http://www.tei-c.org/ns/Examples">
-                           <l facs="#c3-p1-l6">à <placeName ref="#danvillers" corresp="#HB #FH"
-                                 >Danvillers</placeName>
+                        <att>ref</att> dont la valeur est un renvoi vers cette entrée.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                           <l facs="#c3-p1-l6">à
+                              <placeName ref="#danvillers" corresp="#HB #FH">Danvillers</placeName>
                               <placeName ref="#diocese_verdun" corresp="#HB #FH">diocèse de
                                  Verdun</placeName> et <persName ref="#FH">Françoise
                                  Herard</persName> sa femme ses</l>
-                           <l facs="#c3-p1-l7">père et mère ; demeurant à <placeName ref="#Paris"
-                                 corresp="#MB">Paris</placeName>
+                           <l facs="#c3-p1-l7">père et mère ; demeurant à
+                              <placeName ref="#Paris" corresp="#MB">Paris</placeName>
                               <placeName ref="#rue_au_maire" corresp="#MB">rue au Maire</placeName>
                               paroisse</l>
-                           <l facs="#c3-p1-l8"><placeName ref="#paroisse_st_nic_des_ch"
-                                 corresp="#MB">saint Nicolas des Champs</placeName> pour lui et en
-                              son nom d’une part.</l>
-                        </egXML></p>
-                     <p>Les informations relatives aux personnes qui ont été balisées sont : <list>
-                           <item>les sommes d'argent engagées et mentionnées dans le cadre du
-                              contrat, avec l'élément <gi>measure</gi> qui prend pour attribut
-                                 <att>type</att> pour désigner la nature de la somme dans le
-                              contexte du contrat, l'attribut <att>quantity</att> pour en expriemr
-                              la valeur en chiffres et l'attribut <att>unit</att> pour l'unité de
-                              mesure (ici la livre).</item>
-                           <item>les professions et status sociaux des personnes mentionnées, à
-                              l'aide de l'élément <gi>roleName</gi></item>
-                        </list>
+                           <l facs="#c3-p1-l8">
+                              <placeName ref="#paroisse_st_nic_des_ch" corresp="#MB">saint Nicolas des Champs</placeName>
+                              pour lui et en son nom d’une part.</l>
+                        </egXML>
+                     </p>
+                     <p>Les informations relatives aux personnes qui ont été balisées sont :
+                     <list>
+                        <item>les sommes d'argent engagées et mentionnées dans le cadre du
+                           contrat, avec l'élément <gi>measure</gi> qui prend pour attribut
+                           <att>type</att> pour désigner la nature de la somme dans le
+                           contexte du contrat, l'attribut <att>quantity</att> pour en expriemr
+                           la valeur en chiffres et l'attribut <att>unit</att> pour l'unité de
+                           mesure (ici la livre).</item>
+                        <item>les professions et status sociaux des personnes mentionnées, à
+                           l'aide de l'élément <gi>roleName</gi></item>
+                     </list>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <l facs="#c3-p1-l9">Et <persName ref="#FMB">Françoise Margueritte
-                                 Blaut</persName>, majeure <roleName corresp="#FMB">ouvrière en
-                                 linge</roleName></l>
+                              Blaut</persName>, majeure <roleName corresp="#FMB">ouvrière en
+                              linge</roleName></l>
                         </egXML>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples">
                            <l facs="#c3-p2-l11">Les <rs type="person" ref="#MB #FMB">futurs
-                                 époux</rs> se prennent aux biens et droits à chacun</l>
+                              époux</rs> se prennent aux biens et droits à chacun</l>
                            <l facs="#c3-p2-l12">d’eux appartenant, consistant quant après au scavoir
                               ceux dudit</l>
-                        </egXML></p>
+                        </egXML>
+                     </p>
                      <p>Pour distinguer les références aux entités exactes telles que mentionnées
                         dans l'index des attributs associés à ces entités, nous avons choisi
                         l'attribut <att>corresp</att> pour tous les éléments (lieu, profession,
@@ -392,17 +410,17 @@
 
                <moduleRef key="tei"/>
                <moduleRef key="core"
-                  include="p sic corr add del unclear name rs address addrLine measure date head note graphic lb author respStmt resp title l teiCorpus"/>
+                          include="p sic corr add del unclear name rs address addrLine measure date head note graphic lb author respStmt resp title l teiCorpus"/>
                <moduleRef key="header"
-                  include="teiHeader fileDesc titleStmt publicationStmt idno availability sourceDesc encodingDesc projectDesc editorialDecl normalization profileDesc langUsage language"/>
+                          include="teiHeader fileDesc titleStmt publicationStmt idno availability sourceDesc encodingDesc projectDesc editorialDecl normalization profileDesc langUsage language"/>
                <moduleRef key="textstructure" include="TEI text body div signed"/>
 
                <!-- MODULES ADDITIONNELS -->
 
                <moduleRef key="msdescription"
-                  include="msDesc origDate msIdentifier repository msName history origin provenance acquisition additional adminInfo"/>
+                          include="msDesc origDate msIdentifier repository msName history origin provenance acquisition additional adminInfo"/>
                <moduleRef key="namesdates"
-                  include="persName surname forename roleName placeName country settlement district listPerson listPlace listRelation location occupation person place relation residence"/>
+                          include="persName surname forename roleName placeName country settlement district listPerson listPlace listRelation location occupation person place relation residence"/>
                <moduleRef key="transcr" include="facsimile surface zone"/>
                <moduleRef key="corpus" include="particDesc settingDesc"/>
 
