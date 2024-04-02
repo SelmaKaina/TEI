@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
 
+   <!--
+   COMMENTAIRE
+   Bravo, projet éditorial bien abouti qui mène à des choix d'encodage pertinents
+   Quelques redondances auraient pu être évitées à l'aide d'entités (cf. fichier TEI)
+   Encodage précis avec utilisation ingénieuse de certains éléments de la TEI (notamment @corresp)
+   Utilisation parfois un peu flottante de rs : on aurait pu préciser davantage les cas où le balisage est effectué ou non
+   Schéma et règles de validations précisément et pertinemment définies
+   Il manquait l'appel au schematron dans l'édition, ce qui masquait les règles définies dans l'ODD et les erreurs correspondantes
+   -->
+
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Edition numérique de minutes notariales : les contrats de mariage d'ouvrières en
+            <title>Édition numérique de minutes notariales : les contrats de mariage d'ouvrières en
                linge (XVIIIème siècle)</title>
             <author>Selma Bensidhoum</author>
          </titleStmt>
@@ -13,7 +23,7 @@
                réalisée dans le cadre du master TNAH de l'École nationale des chartes.</p>
          </publicationStmt>
          <sourceDesc>
-            <p>Les archives trancrites et encodées dans cette édition sont des minutes issues du
+            <p>Les archives transcrites et encodées dans cette édition sont des minutes issues du
                minutier central des notaires de Paris. Elles sont conservées aux Archives nationales
                de France. Il s'agit plus spécifiquement de minutes de contrats de mariage du
                XVIIIème siècle.</p>
@@ -30,14 +40,14 @@
                transcrits.</p>
             <p>L'encodage a été réalisé en vue d'une visualisation du texte sous forme de fac-similé
                interactif afin de mettre en regard la version manuscrite et sa transcription.</p>
-            <p>Les principes appliqués ont pour objectif :
+            <p>Les principes appliqués ont pour objectif : <!-- Très bien -->
                <list>
-                  <item>dans le cadre des métadonnées du teiHeader, de respecter les principes de
+                  <item>dans le cadre des métadonnées du <gi>teiHeader</gi>, de respecter les principes de
                      description archivistique et de permettre l'identification précise de documents
-                     d'archive transcrits et encodés;</item>
+                     d'archive transcrits et encodés ;</item>
                   <item>dans le cadre du balisage des éléments pertinents dans le texte et de leur
-                     indexation dans le teiHeader, de faciliter leur exploitation dans des projets
-                     d'étude statistique ou de réseaux de relations;</item>
+                     indexation dans le <gi>teiHeader</gi>, de faciliter leur exploitation dans des projets
+                     d'étude statistique ou de réseaux de relations ;</item>
                   <item>dans le cadre de la visualisation sous forme de fac-similé, d'associer les
                      différentes lignes de texte à leur version manuscrite, notamment les
                      suppressions et additions, dans un objectif pédagogique de formation à la
@@ -81,7 +91,7 @@
                   l'époque moderne et à la reconnaissance des formules notariales. Celles-ci peuvent
                   paraître très obscures aux non initiés mais, bien qu'elles présentent souvent de
                   légères variations d'un contrat à l'autre, elles renvoient presque toujours aux
-                  mêmes notions juridiques.</p>
+                  mêmes notions juridiques.</p> <!-- Projet éditorial vraiment abouti, bravo ! -->
             </div2>
             <div2>
                <head>Structure du fichier XML</head>
@@ -91,14 +101,16 @@
                   documents constitutifs du corpus (les trois contrats de mariage).</p>
                <div3>
                   <head>Structure du teiHeader du teiCorpus</head>
-                  <p>Le <gi>teiheader</gi> est composé de deux sections : <specList>
+                  <p>Le <gi>teiheader</gi> est composé de deux sections :
+                  <specList>
                      <specDesc key="fileDesc"/>
                      <specDesc key="encodingDesc"/>
                   </specList>
                   </p>
                   <div4>
                      <head>Structure du fileDesc</head>
-                     <p>Le <gi>fileDesc</gi> est composé de trois sous-ensembles : <specList>
+                     <p>Le <gi>fileDesc</gi> est composé de trois sous-ensembles :
+                     <specList>
                         <specDesc key="titleStmt"/>
                         <specDesc key="publicationStmt"/>
                         <specDesc key="sourceDesc"/>
@@ -107,12 +119,13 @@
                   </div4>
                   <div4>
                      <head>Structure de l'encodingDesc</head>
-                     <p>Le <gi>encodingDesc</gi> est composé de deux sous-ensembles : <specList>
+                     <p>Le <gi>encodingDesc</gi> est composé de deux sous-ensembles :
+                     <specList>
                         <specDesc key="projectDesc"/>
                         <specDesc key="editorialDecl"/>
-                     </specList> Le <gi>editorialDecl</gi> contient une balise
-                        <gi>normalization</gi> décrivant les choix réalisés lors de la
-                        transcription du document manuscrit. </p>
+                     </specList>
+                        Le <gi>editorialDecl</gi> contient une balise <gi>normalization</gi>
+                        décrivant les choix réalisés lors de la transcription du document manuscrit. </p>
                   </div4>
                </div3>
                <div3>
@@ -246,7 +259,7 @@
                            </egXML>
                         </p>
                         <p>L'élément <gi>particDesc</gi> contient un index de personnes, renseignés
-                           dans un éléments <gi>listPerson</gi>. Chaque personne correspond à un
+                           dans un élément <gi>listPerson</gi>. Chaque personne correspond à un
                            élément <gi>person</gi> qui prend deux attributs : un identifiant unique
                            <att>xml:id</att> permettant de lier chaque mention de la personne à
                            son entrée dans l'index, et un <att>role</att> indiquant son rôle dans le
@@ -376,7 +389,7 @@
                            <att>type</att> pour désigner la nature de la somme dans le
                            contexte du contrat, l'attribut <att>quantity</att> pour en exprimer
                            la valeur en chiffres et l'attribut <att>unit</att> pour l'unité de
-                           mesure (ici la livre).</item>
+                           mesure (ici la livre).</item> <!--Très bien-->
                         <item>les professions et status sociaux des personnes mentionnées, à
                            l'aide de l'élément <gi>roleName</gi></item>
                      </list>
@@ -404,7 +417,7 @@
          </div1>
 
          <div1>
-            <head>Elements utilisés dans cette édition</head>
+            <head>Élements utilisés dans cette édition</head>
             <schemaSpec ident="ODD_contrats" start="TEI teiCorpus">
 
 
@@ -433,8 +446,8 @@
                   <desc>contient les informations requises pour identifier le document
                      encodé.</desc>
                   <content>
-                     <!-- L'élément msIdentifier contient au moins un élément repository, un élément idno et un élément msName. -->
-                     <sequence>
+                     <!-- L'élément msIdentifier contient au moins un élément repository, un élément idno et (éventuellement) un élément msName. -->
+                     <sequence> <!-- OK -->
                         <elementRef key="repository" minOccurs="1" maxOccurs="1"/>
                         <elementRef key="idno" minOccurs="1" maxOccurs="1"/>
                         <elementRef key="msName" minOccurs="0" maxOccurs="unbounded"/>
@@ -451,7 +464,7 @@
                   <desc>contient le nom de l'institution conservant le document encodé.</desc>
                   <content>
                      <!-- L'élément repository contient un élément name et un élément address -->
-                     <sequence>
+                     <sequence> <!-- OK -->
                         <elementRef key="name" minOccurs="1" maxOccurs="unbounded"/>
                         <elementRef key="address" minOccurs="0" maxOccurs="unbounded"/>
                      </sequence>
@@ -487,6 +500,7 @@
                      informations sur sa conservation et sur sa gestion</desc>
                   <content>
                      <!-- L'élément additional contient l'élément adminInfo au moins une fois. -->
+                     <!-- OK -->
                      <elementRef key="adminInfo" minOccurs="1" maxOccurs="unbounded"/>
                   </content>
                   <attList>
@@ -500,6 +514,7 @@
                   <desc>contient des informations les conditions d'accès du document encodé.</desc>
                   <content>
                      <!-- L'élément adminInfo contient l'élément availability une fois. -->
+                     <!-- OK -->
                      <elementRef key="availability" minOccurs="1" maxOccurs="1"/>
                   </content>
                   <attList>
@@ -513,6 +528,7 @@
                   <desc>contient une date exprimée dans n'importe quel format.</desc>
                   <attList>
                      <!-- L'élément date prend obligatoirement un attribut when qui retranscrit de manière normée la date mentionnée dans le texte. -->
+                     <!-- OK -->
                      <attDef ident="when" mode="change" usage="req"/>
                      <attDef ident="corresp" mode="delete"/>
                      <attDef ident="cert" mode="delete"/>
@@ -528,6 +544,7 @@
                      document.</desc>
                   <content>
                      <!-- L'élément person contient une séquence d'éléments persName, residence et occupation. -->
+                     <!-- OK -->
                      <sequence preserveOrder="true">
                         <elementRef key="persName" minOccurs="1" maxOccurs="unbounded"/>
                         <elementRef key="residence" minOccurs="0" maxOccurs="unbounded"/>
@@ -536,6 +553,7 @@
                   </content>
                   <attList>
                      <!-- L'élément person prend obligatoirement pour attribut role qui désigne son rôle dans le contexte du contrat encodé -->
+                     <!-- OK -->
                      <attDef ident="role" mode="change" usage="req">
                         <valList mode="add" type="open">
                            <valItem ident="epouse"/>
@@ -560,6 +578,7 @@
                   <desc>permet de signaler le nom d'une personne.</desc>
                   <content>
                      <!-- L'élément persName contient soit du texte, soit une séquence de forename et de surname. -->
+                     <!-- OK -->
                      <alternate>
                         <textNode/>
                         <sequence preserveOrder="true">
@@ -569,13 +588,23 @@
                      </alternate>
                   </content>
                   <constraintSpec ident="refAttribute" scheme="schematron">
-                     <constraint>
+                     <!-- RÈGLE NON FONCTIONNELLE : manque prefixe tei + utilisation de s:rule -->
+                     <!-- Dans ta contrainte tu fais apparaitre une erreur quand  -->
+                     <!--<constraint>
                         <s:assert test="parent::l and not(@ref)"> L'élément persName doit avoir un
                            attribut ref lorsqu'il est un enfant de l'élément l. </s:assert>
+                     </constraint>-->
+                     <constraint>
+                        <s:rule context="tei:TEI//tei:l//tei:persName">
+                           <s:assert test="@ref">
+                              L'élément persName doit avoir un attribut @ref lorsqu'il est un enfant de l'élément l
+                           </s:assert>
+                        </s:rule>
                      </constraint>
                   </constraintSpec>
                   <attList>
                      <!-- L'élément persName peut prendre un attribut ref lorsqu'il est utilisé en dehors de l'index-->
+                     <!-- OK -->
                      <attDef ident="ref" mode="change" usage="opt"/>
                      <attDef ident="calendar" mode="delete"/>
                      <attDef ident="corresp" mode="delete"/>
@@ -592,6 +621,7 @@
                      contrat</desc>
                   <attList>
                      <!-- L'élément forename prend obligatoirement un attribut type qui peut avoir pour valeur "first" ou "middle". -->
+                     <!-- OK -->
                      <attDef ident="type" mode="change" usage="req">
                         <valList mode="add" type="open">
                            <valItem ident="first"/>
@@ -609,6 +639,7 @@
                   <desc>permet de signaler le nom d'un lieu.</desc>
                   <content>
                      <!-- L'élément placeName peut contenir du texte ou une séquence de balises sic et corr dans le cas d'un nom de lieu ayant changé ou mal orthographié.-->
+                     <!-- OK -->
                      <alternate>
                         <textNode/>
                         <sequence preserveOrder="true">
@@ -619,8 +650,14 @@
                   </content>
                   <constraintSpec ident="refAttribute" scheme="schematron">
                      <constraint>
-                        <s:assert test="parent::l and not(@ref)"> L'élément placeName doit avoir un
-                           attribut ref lorsqu'il est un enfant de l'élément l. </s:assert>
+                        <!-- RÈGLE NON FONCTIONNELLE -->
+                        <!--<s:assert test="parent::l and not(@ref)"> L'élément placeName doit avoir un
+                           attribut ref lorsqu'il est un enfant de l'élément l. </s:assert>-->
+                           <s:rule context="tei:TEI//tei:l//tei:placeName">
+                              <s:assert test="@ref">
+                                 L'élément placeName doit avoir un attribut @ref lorsqu'il est un enfant de l'élément l
+                              </s:assert>
+                           </s:rule>
                      </constraint>
                   </constraintSpec>
                   <attList>
@@ -653,6 +690,7 @@
                   <attList>
                      <!-- L'élément settlement prend obligatoirement un attribut type qui spécifie le type de localité décrit. 
                         Dans mes exemples, je n'utilise que la valeur "city", mais de futurs encodeurs pourront ajouter d'autres valeurs à cet attribut.-->
+                     <!-- OK -->
                      <attDef ident="type" mode="change" usage="opt">
                         <valList mode="add" type="open">
                            <valItem ident="city"/>
@@ -675,7 +713,8 @@
                      administrative dans l'index des lieux.</desc>
                   <attList>
                      <!-- L'élément district prend obligatoirement un attribut type qui peut avoir pour valeur arrondissement, 
-                        departement, region, ou toute autre nom de subdivision géographique rencontrée par les futurs encodeurs. -->
+                        departement, region, ou tout autre nom de subdivision géographique rencontrée par les futurs encodeurs. -->
+                     <!-- OK -->
                      <attDef ident="type" mode="change" usage="req">
                         <valList mode="add" type="open">
                            <valItem ident="arrondissement"/>
@@ -700,6 +739,7 @@
                   <desc>contient des informations sur un lieu géographique.</desc>
                   <content>
                      <!-- L'élément place contient au moins un élément placeName et peut contenir un élément location -->
+                     <!-- OK -->
                      <sequence preserveOrder="true">
                         <elementRef key="placeName" minOccurs="1" maxOccurs="unbounded"/>
                         <elementRef key="location" minOccurs="0" maxOccurs="1"/>
@@ -707,6 +747,7 @@
                   </content>
                   <attList>
                      <!-- L'élément place prend obligatoirement l'attribut type qui définit le type de lieu décrit. -->
+                     <!-- OK -->
                      <attDef ident="type" mode="change" usage="req">
                         <valList mode="add" type="open">
                            <valItem ident="city"/>
@@ -753,6 +794,7 @@
                      ou d'un produit.</desc>
                   <attList>
                      <!-- L'élément measure prend obligatoirement un attribut type dont la valeur décrit la nature des éléments mesurés.-->
+                     <!-- OK -->
                      <attDef ident="type" mode="change" usage="req">
                         <valList mode="add" type="open">
                            <valItem ident="biens_communauté"/>
@@ -927,7 +969,7 @@
                   <gloss>Origine</gloss>
                   <desc>contient des informations sur l'origine du document d'archive.</desc>
                   <attList>
-                     <!-- L'élément origin peut prendre pour pour attribut notBefore et notAfter -->
+                     <!-- L'élément origin peut prendre pour attribut notBefore et notAfter -->
                      <attDef ident="notBefore" mode="change" usage="opt"/>
                      <attDef ident="notAfter" mode="change" usage="opt"/>
                      <attDef ident="calendar" mode="delete"/>

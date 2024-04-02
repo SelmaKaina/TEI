@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Il manque l'appel au schematron -->
 <?xml-model href="out/ODD_Selma_Bensidhoum.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/ODD_Selma_Bensidhoum.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<!DOCTYPE teiCorpus [
+    <!ENTITY availability SYSTEM "dtd/availability.xml" >
+    <!ENTITY repository SYSTEM "dtd/repository.xml" >
+]>
+
 <teiCorpus version="3.3.0" xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Edition numériques de minutes notariales : les contrats de mariages d'ouvrières
+            <title>Édition numériques de minutes notariales : les contrats de mariages d'ouvrières
                en linge (XVIIIème siècle)</title>
             <respStmt>
                <resp>Transcription et encodage</resp>
                <persName>
                   <forename type="first">Selma</forename>
                   <forename type="middle">Kaïna</forename>
-                  <surname>Bensidhoum</surname></persName>
+                  <surname>Bensidhoum</surname>
+               </persName>
             </respStmt>
          </titleStmt>
          <publicationStmt>
@@ -28,7 +37,7 @@
       <encodingDesc>
          <projectDesc>
             <p>L’objectif de cette édition numérique est d’identifier et extraire les informations
-               pertinente à une analyse historique des archives du Minutier central des Archives
+               pertinentes à une analyse historique des archives du Minutier central des Archives
                nationales de France, afin de servir à des études statistiques sur la population
                parisienne.</p>
             <p>L’édition numérique permet également la comparaison entre le texte transcrit et
@@ -59,14 +68,7 @@
             <sourceDesc>
                <msDesc xml:id="MC-ET-XXVIII-458">
                   <msIdentifier>
-                     <repository>
-                        <name>Archives nationales de France</name>
-                        <address>
-                           <addrLine>60, rue des Francs Bourgeois,</addrLine>
-                           <addrLine>75003</addrLine>
-                           <addrLine>Paris</addrLine>
-                        </address>
-                     </repository>
+                     &repository;
                      <idno type="cote">MC/ET/XXVIII/458</idno>
                      <msName>Minutes et répertoires du notaire Nicolas LARDIN, 3 février 1776 - 4
                         novembre 1785 (étude XXVIII)</msName>
@@ -90,19 +92,7 @@
                   </history>
                   <additional>
                      <adminInfo>
-                        <availability status="restricted">
-                           <p>Minutes et répertoires : la loi 2008-696 du 15 juillet 2008 relative
-                              aux archives a fixé à 75 ans à compter de la date de l'acte, ou à 25
-                              ans à compter de la date du décès de l'intéressé si ce délai est plus
-                              bref, le délai de communication des minutes et répertoires des
-                              notaires ; ce délai est porté à 100 ans à compter de la date de l'acte
-                              si le document se rapporte à un mineur (code du Patrimoine, articles
-                              L213-2, 4e d et 5e).</p>
-                           <p>Les documents peuvent être librement reproduits à usage privé du
-                              copiste, sous réserve des contraintes liées à leur état matériel et
-                              dans le respect des textes relatifs à la réutilisation des
-                              informations publiques.</p>
-                        </availability>
+                        &availability;
                      </adminInfo>
                   </additional>
                </msDesc>
@@ -485,7 +475,7 @@
                   <l facs="#c1-p1-l6">Et demoiselle <persName ref="#MGG">Marie Geneviève
                      Girard</persName> <roleName corresp="#MGG">ouvrière en linge</roleName>
                      demeurant</l>
-                  <l facs="#c1-p1-l7">à <placeName ref="#Paris">Paris</placeName>
+                  <l facs="#c1-p1-l7">à <placeName ref="#Paris">Paris</placeName> <!--@corresp ?-->
                      <placeName ref="#gde_rue_fb_st_ant" corresp="#MGG">Grande rue</placeName>
                      <placeName ref="#faubourg_st_ant" corresp="#MGG">dudit faubourg</placeName>
                      <placeName ref="#paroisse_ste_mar" corresp="#MGG">même paroisse</placeName>,
@@ -493,7 +483,8 @@
                   <l facs="#c1-p1-l8"><persName ref="#JG">Jean Girard</persName>
                      <roleName corresp="#JG">scieur de long</roleName> et
                      <persName ref="#MGC">Marie Geneviève Coudray</persName></l>
-                  <l facs="#c1-p1-l9">sa femme stupilante et contractante pour elle et en son</l>
+                  <l facs="#c1-p1-l9">sa <rs type="person" ref="#MGG">femme stupilante</rs>
+                     et contractante pour elle et en son</l>
                   <l facs="#c1-p1-l10">nom d’autre part.</l>
                </p>
                <p>
@@ -510,7 +501,7 @@
                      époux</rs> communs en tous biens meubles</l>
                   <l facs="#c1-p1-l18">et conquets immeubles suivant la coutume de</l>
                   <l facs="#c1-p1-l19">Paris au désir de laquelle leur future communauté sera</l>
-                  <l facs="#c1-p1-l20">régie et gouvernée, déogeant pour ce à toute</l>
+                  <l facs="#c1-p1-l20">régie et gouvernée, dérogeant pour ce à toute</l>
                   <l facs="#c1-p2-l1">autre contraire.</l>
                </p>
                <p>
@@ -653,20 +644,13 @@
             </titleStmt>
             <publicationStmt>
                <p>Transcription encodée et enrichie du contrat de mariage de Michel Datte et Marie
-                  Catherine Coppé, réalisée dans le cadre du master TNAH de l'Ecole nationale des
+                  Catherine Coppé, réalisée dans le cadre du master TNAH de l'École nationale des
                   chartes.</p>
             </publicationStmt>
             <sourceDesc>
                <msDesc xml:id="MC-ET-LXIX-691">
                   <msIdentifier>
-                     <repository>
-                        <name>Archives nationales de France</name>
-                        <address>
-                           <addrLine>60, rue des Francs Bourgeois,</addrLine>
-                           <addrLine>75003</addrLine>
-                           <addrLine>Paris</addrLine>
-                        </address>
-                     </repository>
+                     &repository;
                      <idno type="cote">MC/ET/LXIX/691</idno>
                      <msName>Minutes et répertoires du notaire Augustin Amable SIBIRE, 13 juin 1759
                         - 13 février 1772 (étude LXIX)</msName>
@@ -692,19 +676,7 @@
                   </history>
                   <additional>
                      <adminInfo>
-                        <availability status="restricted">
-                           <p>Minutes et répertoires : la loi 2008-696 du 15 juillet 2008 relative
-                              aux archives a fixé à 75 ans à compter de la date de l'acte, ou à 25
-                              ans à compter de la date du décès de l'intéressé si ce délai est plus
-                              bref, le délai de communication des minutes et répertoires des
-                              notaires ; ce délai est porté à 100 ans à compter de la date de l'acte
-                              si le document se rapporte à un mineur (code du Patrimoine, articles
-                              L213-2, 4e d et 5e).</p>
-                           <p>Les documents peuvent être librement reproduits à usage privé du
-                              copiste, sous réserve des contraintes liées à leur état matériel et
-                              dans le respect des textes relatifs à la réutilisation des
-                              informations publiques.</p>
-                        </availability>
+                        &availability;
                      </adminInfo>
                   </additional>
                </msDesc>
@@ -1070,9 +1042,8 @@
                <p>
                   <l facs="#c2-p2-l10">Les biens du <rs type="person" ref="#MD">futur époux</rs>
                      consistent en la somme</l>
-                  <l facs="#c2-p2-l11">de
-                     <measure type="biens_propre" quantity="400" unit="livres" corresp="#MD">quatre cent livres</measure>
-                     composée des habits,</l>
+                  <l facs="#c2-p2-l11">de <measure type="biens_propre" quantity="400" unit="livres" corresp="#MD">
+                     quatre cent livres</measure> composée des habits,</l>
                   <l facs="#c2-p2-l12">linges &amp; hardes à son usage, meubles meublans &amp;
                      devise</l>
                   <l facs="#c2-p2-l13">comptant dont du tout il a donné connaissance de bonne
@@ -1083,8 +1054,7 @@
                      consistent en la somme</l>
                   <l facs="#c2-p2-l16">de
                      <measure type="biens_propres" quantity="600" unit="livres" corresp="#MCC">six cent livres</measure>,
-                     composée pareillement des habits,
-                     linges</l>
+                     composée pareillement des habits, linges</l>
                   <l facs="#c2-p2-l17">et hardes à son usage meubles meublant &amp; deniers
                      comptant,</l>
                   <l facs="#c2-p2-l18">le tout que <rs type="person" ref="#MD">ledit futur
@@ -1093,11 +1063,11 @@
                      épouse</rs>.</l>
                </p>
                <p>
-                  <l facs="#c2-p2-l20">Desquels biens de chacun <rs type="person" ref="#MD #MCC"
-                  >lesdits futurs époux</rs> il entrera</l>
+                  <l facs="#c2-p2-l20">Desquels biens de chacun <rs type="person" ref="#MD #MCC">
+                     lesdits futurs époux</rs> il entrera</l>
                   <l facs="#c2-p2-l21">de part &amp; d’autre en communauté la somme de
-                     <measure type="biens_communs" quantity="200" unit="livres" corresp="#MD #MCC">deux
-                     cents</measure></l>
+                     <measure type="biens_communs" quantity="200" unit="livres" corresp="#MD #MCC">
+                     deux cents</measure></l>
                   <l facs="#c2-p2-l22">livres &amp; le surplus avec ce qui précédant ledit mariage
                      aviendra</l>
                   <l facs="#c2-p2-l23">et échera à chacun d’eux par succession, donation, legs
@@ -1109,12 +1079,11 @@
                <p>
                   <l facs="#c2-p2-l26"><rs type="person" ref="#MD">Le futur époux</rs> a doué &amp;
                      doue <rs type="person" ref="#MCC">ladite future épouse</rs></l>
-                  <l facs="#c2-p2-l27">de
-                     <measure type="douaire" quantity="300" unit="livres" corresp="#MCC">trois cent livres</measure>
-                     de douaire préfix une fois payée</l>
+                  <l facs="#c2-p2-l27">de <measure type="douaire" quantity="300" unit="livres" corresp="#MCC">
+                     trois cent livres</measure> de douaire préfix une fois payée</l>
                   <l facs="#c2-p2-l28">dont elle jouira dès qu’il aura lieu au desir de la coutume
                      de</l>
-                  <l facs="#c2-p2-l29">Paris.</l>
+                  <l facs="#c2-p2-l29"><placeName ref="#Paris">Paris</placeName>.</l>
                </p>
                <p>
                   <l facs="#c2-p2-l30">Le survivant <rs type="person" ref="#MD #MCC">desdits futurs
@@ -1125,8 +1094,8 @@
                   <l facs="#c2-p3-l3">prisée de l’inventaire qui en sera fait &amp; sans crue
                      jusqu’à</l>
                   <l facs="#c2-p3-l4">concurrence de la somme de
-                     <measure type="preciput" quantity="150" unit="livres" corresp="#MCC">cent cinquante livres</measure>
-                     ou ladite</l>
+                     <measure type="preciput" quantity="150" unit="livres" corresp="#MCC">
+                     cent cinquante livres</measure> ou ladite</l>
                   <l facs="#c2-p3-l5">somme en deniers comptant au choix du survivant.</l>
                </p>
                <p>
@@ -1149,8 +1118,8 @@
                      iceluy</del></l>
                   <l facs="#c2-p3-l14">pour succession, donation, legs ou autrement tant en
                      meubles</l>
-                  <l facs="#c2-p3-l15">qu’immeubles ; même si c’est <rs type="person" ref="#MCC"
-                  >ladite future épouse</rs></l>
+                  <l facs="#c2-p3-l15">qu’immeubles ; même si c’est
+                     <rs type="person" ref="#MCC">ladite future épouse</rs></l>
                   <l facs="#c2-p3-l16">qui exerce cette faculté elle reprendra en outre ses
                      douaire</l>
                   <l facs="#c2-p3-l17">&amp; preciput tels que dessus stipulés le tout franc &amp;
@@ -1241,14 +1210,7 @@
             <sourceDesc>
                <msDesc xml:id="MC-ET-IV-573">
                   <msIdentifier>
-                     <repository>
-                        <name>Archives nationales de France</name>
-                        <address>
-                           <addrLine>60, rue des Francs Bourgeois,</addrLine>
-                           <addrLine>75003</addrLine>
-                           <addrLine>Paris</addrLine>
-                        </address>
-                     </repository>
+                     &repository;
                      <idno type="cote">MC/ET/IV/573</idno>
                      <msName>Minutes et répertoires du notaire Jean ANDRIEU, 22 juillet 1744 - 7 mai
                         1765 (étude IV)</msName>
@@ -1276,19 +1238,7 @@
                   </history>
                   <additional>
                      <adminInfo>
-                        <availability status="restricted">
-                           <p>Minutes et répertoires : la loi 2008-696 du 15 juillet 2008 relative
-                              aux archives a fixé à 75 ans à compter de la date de l'acte, ou à 25
-                              ans à compter de la date du décès de l'intéressé si ce délai est plus
-                              bref, le délai de communication des minutes et répertoires des
-                              notaires ; ce délai est porté à 100 ans à compter de la date de l'acte
-                              si le document se rapporte à un mineur (code du Patrimoine, articles
-                              L213-2, 4e d et 5e).</p>
-                           <p>Les documents peuvent être librement reproduits à usage privé du
-                              copiste, sous réserve des contraintes liées à leur état matériel et
-                              dans le respect des textes relatifs à la réutilisation des
-                              informations publiques.</p>
-                        </availability>
+                        &availability;
                      </adminInfo>
                   </additional>
                </msDesc>
@@ -1701,8 +1651,8 @@
                   <l facs="#c3-p1-l24">ainsy qu’il suit.</l>
                </p>
                <p>
-                  <l facs="#c3-p1-l25">C’est à savoir que les
-                     <rs type="person" ref="#MB #FMB">futurs époux</rs> seront communs en</l>
+                  <l facs="#c3-p1-l25">C’est à savoir que les <rs type="person" ref="#MB #FMB">
+                     futurs époux</rs> seront communs en</l>
                   <l facs="#c3-p2-l1">tout bien meuble et conquet immeuble suivant la coutume de
                      Paris</l>
                   <l facs="#c3-p2-l2">au desir de laquelle leur future communauté sera régie et
